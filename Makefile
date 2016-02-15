@@ -9,3 +9,6 @@ main:
 	--chapters --toc --number-sections \
 	../$(name).md -o $(name).tex
 	cd include && latexmk -f -interaction=nonstopmode -pdf -xelatex $(name).tex
+
+clean:
+	cd include && rm $(name).*
