@@ -1,0 +1,90 @@
+\usepackage{amsmath,amssymb}
+\usepackage{mathrsfs}
+\usepackage{slashed}
+% \usepackage{bbm}
+
+% XeLaTeX stuff
+\usepackage[xetex]{graphicx}
+\usepackage{mathspec}
+\usepackage{xltxtra}
+\usepackage{xunicode}
+\usepackage{polyglossia}
+
+\setsansfont[Ligatures=TeX,BoldFont={Source Sans Pro Bold}]{Source Sans Pro}
+% \DeclareTextFontCommand{\emph}{\bfseries}
+\setmainfont[Ligatures=TeX,BoldFont={Linux Libertine O Bold}]{Linux Libertine O}
+\setmathfont(Digits,Latin){Linux Libertine O}
+\setmathfont[range=\mathup/{latin,Latin,num}]{Linux Libertine O}
+\setmathfont(Greek){Linux Libertine O}
+
+% \setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
+% \setmathfont(Digits,Latin){TeX Gyre Pagella}
+% \setmathfont(Greek){TeX Gyre Pagella}
+% \linespread{1.1}
+
+\newcommand{\mathbbm}[1]{\text{\usefont{U}{bbm}{m}{n}#1}}
+
+\DeclareMathVersion{sansserifbold}
+
+\fontspec{Source Sans Pro Bold} %gewünschte Schrift aktivieren
+\makeatletter
+\SetSymbolFont{Latin:m:n}{sansserifbold}{EU1}{\zf@family}{m}{n}
+\SetSymbolFont{Latin:m:it}{sansserifbold}{EU1}{\zf@family}{m}{it}
+\SetSymbolFont{Digits:m:n}{sansserifbold}{EU1}{\zf@family}{m}{n}
+% \SetSymbolFont{Latin:b:n}{sansserifbold}{EU1}{\zf@family}{b}{n}
+% \SetSymbolFont{Latin:b:it}{sansserifbold}{EU1}{\zf@family}{b}{it}
+% \SetSymbolFont{Digits:b:n}{sansserifbold}{EU1}{\zf@family}{b}{n}
+% \SetSymbolFont{operators}{sansserifbold}{EU1}{\zf@family}{m}{n}
+% \SetSymbolFont{Greek:m:n}{sansserifbold}{EU1}{\zf@family}{m}{n}
+% \SetSymbolFont{Greek:m:it}{sansserifbold}{EU1}{\zf@family}{m}{it}
+
+\usepackage{xcolor}
+
+\definecolor{TUMblau}{rgb}{0,0.396,0.741} % Pantone 300
+\definecolor{blue}{rgb}{0,0.322,0.576} % Pantone 301
+
+\usepackage[colorlinks,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{enumerate}
+\usepackage{slashed}
+% \usepackage{cite}
+\usepackage{multirow}
+\usepackage{lipsum}
+\usepackage[british]{isodate}
+
+% \addtokomafont{disposition}{\color{black!90}\mathversion{sansserifbold}}
+\addtokomafont{disposition}{\color{blue}\mathversion{sansserifbold}}
+\addtokomafont{date}{\small\color{gray}}
+\addtokomafont{title}{\color{blue}}
+
+\pagestyle{plain}
+
+
+
+
+% \addtokomafont{author}{\raggedright\large}
+% \addtokomafont{date}{\raggedright\large \color{gray}}
+% \addtokomafont{title}{\color{TUMblau}}
+% \addtokomafont{publishers}{\raggedright\large}
+% \addtokomafont{titlehead}{\raggedright\large}
+% \addtokomafont{subject}{\raggedright\large}
+% \titlehead{%
+% \includegraphics[height=8mm]{PH}%
+% \hfill\includegraphics[height=8mm]{TUM}}
+
+
+
+\renewcommand{\topfraction}{0.8}	% max fraction of floats at top
+\renewcommand{\bottomfraction}{0.7}	% max fraction of floats at bottom
+%   Parameters for TEXT pages (not float pages):
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}     % 2 may work better
+\setcounter{dbltopnumber}{2}    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.15}	% allow minimal text w. figs
+%   Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+    % N.B.: floatpagefraction MUST be less than topfraction !!
+\renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+\usepackage{feyn}
